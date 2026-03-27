@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register - Indie Bookstore SaaS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+
+<!-- Icons -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<section class="register-page">
+
+<div class="register-container">
+
+<!-- LEFT -->
+<div class="register-left">
+  <h1>Begin Your Reading Journey</h1>
+  <p>
+    Discover timeless stories, build your personal library,
+    and manage your bookstore with a premium experience.
+  </p>
+</div>
+
+<!-- RIGHT -->
+<div class="register-box">
+
+<h2>Create Account</h2>
+
+<form id="registerForm">
+
+<!-- NAME -->
+<div class="input-group">
+  <i class="fa-solid fa-user"></i>
+  <input type="text" required>
+  <label>Full Name</label>
+</div>
+
+<!-- EMAIL -->
+<div class="input-group">
+  <i class="fa-solid fa-envelope"></i>
+  <input type="email" required>
+  <label>Email Address</label>
+</div>
+
+<!-- PASSWORD -->
+<div class="input-group">
+  <i class="fa-solid fa-lock"></i>
+  <input type="password" id="password" required>
+  <label>Password</label>
+  <span class="toggle-pass" onclick="togglePass('password')">
+    <i class="fa-solid fa-eye"></i>
+  </span>
+</div>
+
+<div class="strength-bar">
+  <div id="strength"></div>
+</div>
+
+<!-- CONFIRM -->
+<div class="input-group">
+  <i class="fa-solid fa-lock"></i>
+  <input type="password" id="confirm" required>
+  <label>Confirm Password</label>
+</div>
+
+<!-- TERMS -->
+<div class="options">
+  <label><input type="checkbox" required> Agree to Terms</label>
+</div>
+
+<!-- BUTTON -->
+<button class="register-btn">Create Account</button>
+
+<!-- DIVIDER -->
+<div class="divider">or continue with</div>
+
+<!-- SOCIAL -->
+<div class="social-login">
+  <button><i class="fa-brands fa-google"></i></button>
+  <button><i class="fa-brands fa-facebook-f"></i></button>
+</div>
+
+<!-- LOGIN -->
+<p class="login-text">
+  Already have an account? <a href="login.html">Login</a>
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+// PASSWORD TOGGLE
+function togglePass(id){
+const input = document.getElementById(id);
+input.type = input.type === "password" ? "text" : "password";
+}
+
+// PASSWORD STRENGTH
+const password = document.getElementById("password");
+const strength = document.getElementById("strength");
+
+password.addEventListener("input", () => {
+let val = password.value;
+let score = 0;
+
+if(val.length > 6) score++;
+if(/[A-Z]/.test(val)) score++;
+if(/[0-9]/.test(val)) score++;
+if(/[^A-Za-z0-9]/.test(val)) score++;
+
+strength.style.width = (score * 25) + "%";
+});
+
+</script>
+
+</body>
+</html>

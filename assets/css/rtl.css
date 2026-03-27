@@ -1,0 +1,309 @@
+html[dir="rtl"] body{
+direction:rtl;
+}
+
+/* html[dir="rtl"] .nav-wrapper{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .nav-menu ul{
+flex-direction:row-reverse;
+} */
+html[dir="rtl"] .header{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .dropdown-menu{
+left:auto;
+right:0;
+text-align:right;
+}
+
+html[dir="rtl"] .arrow{
+margin-left:0;
+margin-right:5px;
+}
+/* HERO RTL */
+
+html[dir="rtl"] .hero-container{
+
+direction:rtl;
+
+}
+
+html[dir="rtl"] .hero-buttons{
+
+flex-direction:row-reverse;
+
+}
+/* FEATURED BOOKS RTL */
+
+html[dir="rtl"] .book-footer{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .book-actions a{
+margin-left:0;
+margin-right:10px;
+}
+/* STAFF PICKS RTL */
+
+html[dir="rtl"] .staff-card{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .staff-member{
+flex-direction:row-reverse;
+}
+/* BOOK CATEGORIES RTL */
+
+html[dir="rtl"] .category-card{
+flex-direction:row-reverse;
+}
+/* TESTIMONIALS RTL */
+
+html[dir="rtl"] .testimonial-user{
+flex-direction:row-reverse;
+}
+/* RTL Mode */
+
+[dir="rtl"] .event-content{
+  text-align:right;
+}
+
+[dir="rtl"] .event-btn{
+  display:inline-block;
+}
+
+[dir="rtl"] .events-grid{
+  direction:rtl;
+}
+/* RTL */
+
+[dir="rtl"] .newsletter-form{
+  flex-direction:row-reverse;
+}
+
+[dir="rtl"] .newsletter-form input{
+  text-align:right;
+}
+/* RTL */
+
+[dir="rtl"] .footer{
+  direction:rtl;
+}
+
+[dir="rtl"] .footer-col ul li a:hover{
+  padding-right:5px;
+  padding-left:0;
+}
+
+[dir="rtl"] .social-icons{
+  justify-content:flex-start;
+}
+/* RTL */
+
+[dir="rtl"] .hero-buttons{
+  flex-direction:row-reverse;
+}
+
+[dir="rtl"] .hero2-content{
+  text-align:right;
+}
+[dir="rtl"] .hp2-hero-layout{
+
+direction:rtl;
+
+}
+
+[dir="rtl"] .hp2-hero-text{
+
+text-align:right;
+
+}
+
+[dir="rtl"] .hp2-hero-actions{
+
+flex-direction:row-reverse;
+
+}
+[dir="rtl"] .hp2-collection-content{
+
+left:auto;
+right:30px;
+
+}
+
+[dir="rtl"] .hp2-collections-header{
+
+text-align:center;
+
+}
+[dir="rtl"] .hp2-collection-content{
+left:auto;
+right:30px;
+}
+[dir="rtl"] .hp2-event-date{
+left:auto;
+right:15px;
+}
+[dir="rtl"] .hp2-newsletter-form{
+
+flex-direction:row-reverse;
+
+}
+[dir="rtl"] .svc-header{
+
+text-align:center;
+
+}
+[dir="rtl"] .rec-container{
+
+direction:rtl;
+
+}
+
+[dir="rtl"] .rec-content{
+
+text-align:right;
+
+}
+[dir="rtl"] .club-header{
+
+text-align:center;
+
+}
+[dir="rtl"] .sub-grid{
+
+direction:rtl;
+
+}
+[dir="rtl"] .bsfaq-question{
+
+flex-direction:row-reverse;
+
+}
+[dir="rtl"] .bloghero-content{
+
+direction:rtl;
+
+}
+[dir="rtl"] .featblog-card{
+
+direction:rtl;
+
+}
+[dir="rtl"] .bloggrid-grid{
+
+direction:rtl;
+
+}
+[dir="rtl"] .reviewhl-card{
+
+flex-direction:row-reverse;
+
+}
+
+[dir="rtl"] .reviewhl-content{
+
+padding-right:20px;
+padding-left:0;
+
+}
+[dir="rtl"] .authspot-container{
+
+direction:rtl;
+
+}
+[dir="rtl"] .about-hero-content{
+
+text-align:center;
+
+}
+[dir="rtl"] .ourstory-container{
+direction:rtl;
+}
+
+[dir="rtl"] .ourstory-content{
+text-align:right;
+}
+[dir="rtl"] .bs-mv-grid{
+direction:rtl;
+}
+
+[dir="rtl"] .bs-mv-card{
+text-align:center;
+}
+[dir="rtl"] .bs-achieve-grid{
+direction:rtl;
+}
+[dir="rtl"] .bs-community-container{
+direction:rtl;
+}
+
+[dir="rtl"] .bs-community-content{
+text-align:right;
+}
+[dir="rtl"] .visitshop-container{
+direction:rtl;
+}
+
+[dir="rtl"] .visitshop-content{
+text-align:right;
+}
+[dir="rtl"] .bscontacthero-content{
+direction:rtl;
+text-align:center;
+}
+[dir="rtl"] .bscontact-container{
+direction:rtl;
+}
+
+[dir="rtl"] .bscontact-info{
+text-align:right;
+}
+body.dark-mode .bscontactcards-section{
+background:#111;
+}
+
+body.dark-mode .bscontactcards-card{
+background:#1a1a1a;
+}
+
+body.dark-mode .bscontactcards-card h3{
+color:#fff;
+}
+
+body.dark-mode .bscontactcards-card p{
+color:#bbb;
+}
+[dir="rtl"] .bssocial-grid{
+direction:rtl;
+}
+[dir="rtl"] .bscontact-container{
+direction:rtl;
+}
+
+[dir="rtl"] .bscontact-info{
+text-align:right;
+}
+
+
+/* ======================
+   RTL
+====================== */
+
+[dir="rtl"] .input-group i{
+left:auto;
+right:12px;
+}
+
+[dir="rtl"] .input-group input{
+padding:14px 40px 14px 14px;
+}
+
+[dir="rtl"] .input-group label{
+left:auto;
+right:40px;
+}
+

@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>User Dashboard - Indie Bookstore</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body class="admin-body admin-light user-dashboard-page">
+
+<div class="admin-shell admin-clean user-dashboard-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar clean-sidebar user-dashboard-sidebar" id="userSidebar">
+
+    <div class="admin-brand clean-brand">
+      <div class="brand-mark clean-mark">
+        <i class="fa-solid fa-book"></i>
+      </div>
+      <div class="brand-text">
+        <h3>IndieBooks</h3>
+        <span>User Dashboard</span>
+      </div>
+    </div>
+
+    <div class="sidebar-search clean-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search menu">
+    </div>
+
+    <nav class="admin-menu clean-menu user-menu">
+      <a class="menu-item active" href="#overview">
+        <span class="menu-icon"><i class="fa-solid fa-house"></i></span>
+        <span class="menu-label">Overview</span>
+      </a>
+
+      <a class="menu-item" href="#orders">
+        <span class="menu-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+        <span class="menu-label">My Orders</span>
+      </a>
+
+      <a class="menu-item" href="#wishlist">
+        <span class="menu-icon"><i class="fa-solid fa-heart"></i></span>
+        <span class="menu-label">Wishlist</span>
+      </a>
+
+      <a class="menu-item" href="#goals">
+        <span class="menu-icon"><i class="fa-solid fa-bullseye"></i></span>
+        <span class="menu-label">Reading Goals</span>
+      </a>
+
+      <a class="menu-item" href="#recommendations">
+        <span class="menu-icon"><i class="fa-solid fa-lightbulb"></i></span>
+        <span class="menu-label">Recommendations</span>
+      </a>
+
+      <a class="menu-item" href="#profile">
+        <span class="menu-icon"><i class="fa-solid fa-user"></i></span>
+        <span class="menu-label">Profile</span>
+      </a>
+
+      <a class="menu-item" href="#support">
+        <span class="menu-icon"><i class="fa-solid fa-headset"></i></span>
+        <span class="menu-label">Support</span>
+      </a>
+
+      <div class="menu-divider">Account</div>
+
+      <a class="menu-item logout" href="#logout">
+        <span class="menu-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+        <span class="menu-label">Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="admin-main clean-main">
+
+    <!-- NAVBAR -->
+    <header class="admin-navbar clean-navbar user-navbar">
+      <div class="navbar-left">
+        <div class="brand-inline admin-brand-left">
+          <i class="fa-solid fa-book"></i>
+          <span>IndieBooks</span>
+        </div>
+      </div>
+
+      <div class="navbar-actions">
+        <button class="ghost-btn" id="rtlToggle" aria-label="Toggle RTL">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
+        <button class="ghost-btn" id="themeToggleUser" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a class="primary-btn btn-logout" href="login.html" aria-label="Login">Login</a>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="overview-section" id="overview">
+      <div class="overview-header">
+        <h1>Dashboard</h1>
+      </div>
+
+      <div class="kpi-grid clean-kpi">
+        <div class="kpi-card clean-card green">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-book-open"></i></div>
+          <div>
+            <span>Books Read</span>
+            <h2>24</h2>
+            <p class="kpi-note up">+3 this month</p>
+          </div>
+        </div>
+
+        <div class="kpi-card clean-card blue">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-star"></i></div>
+          <div>
+            <span>Reward Points</span>
+            <h2>1,540</h2>
+            <p class="kpi-note up">+120 this week</p>
+          </div>
+        </div>
+
+        <div class="kpi-card clean-card purple">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-calendar"></i></div>
+          <div>
+            <span>Upcoming Events</span>
+            <h2>2</h2>
+            <p class="kpi-note warn">Next on Apr 04</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDERS -->
+    <section class="content-section clean-section" id="orders">
+      <div class="section-header-row">
+        <div>
+          <h2>My Orders</h2>
+          <p>Recent purchases and delivery updates.</p>
+        </div>
+        <button class="primary-btn">Track Orders</button>
+      </div>
+      <div class="clean-table">
+        <div class="table-row header">
+          <span>Order</span>
+          <span>Book</span>
+          <span>Status</span>
+          <span>Total</span>
+        </div>
+        <div class="table-row">
+          <span>#A1024</span>
+          <span>The Midnight Library</span>
+          <span class="badge active">Delivered</span>
+          <span>$28.00</span>
+        </div>
+        <div class="table-row">
+          <span>#A1031</span>
+          <span>Atomic Habits</span>
+          <span class="badge warn">In Transit</span>
+          <span>$19.50</span>
+        </div>
+        <div class="table-row">
+          <span>#A1042</span>
+          <span>The Alchemist</span>
+          <span class="badge inactive">Pending</span>
+          <span>$16.00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISHLIST -->
+    <section class="content-section clean-section" id="wishlist">
+      <div class="section-header-row">
+        <div>
+          <h2>Wishlist</h2>
+          <p>Books saved for later and trending picks.</p>
+        </div>
+        <button class="primary-btn">Shop Now</button>
+      </div>
+      <div class="order-grid">
+        <div class="order-card clean-card">
+          <div>
+            <h3>Educated</h3>
+            <p>Tara Westover - Memoir</p>
+          </div>
+          <span class="badge active">Available</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Project Hail Mary</h3>
+            <p>Andy Weir - Sci-Fi</p>
+          </div>
+          <span class="badge warn">Low Stock</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Becoming</h3>
+            <p>Michelle Obama - Biography</p>
+          </div>
+          <span class="badge active">Available</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOALS -->
+    <section class="content-section clean-section" id="goals">
+      <div class="section-header-row">
+        <div>
+          <h2>Reading Goals</h2>
+          <p>Track progress on your 2026 reading challenge.</p>
+        </div>
+        <button class="primary-btn">Update Goal</button>
+      </div>
+      <div class="order-grid">
+        <div class="progress-card">
+          <h3>Annual Goal</h3>
+          <p>24 of 40 books completed</p>
+          <div class="progress-bar"><span class="progress-fill" style="width:60%"></span></div>
+        </div>
+        <div class="progress-card">
+          <h3>Monthly Goal</h3>
+          <p>3 of 5 books completed</p>
+          <div class="progress-bar"><span class="progress-fill" style="width:60%"></span></div>
+        </div>
+        <div class="progress-card">
+          <h3>Weekly Goal</h3>
+          <p>1 of 2 books completed</p>
+          <div class="progress-bar"><span class="progress-fill" style="width:50%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section class="content-section clean-section" id="recommendations">
+      <div class="section-header-row">
+        <div>
+          <h2>Recommendations</h2>
+          <p>Curated picks based on your reading history.</p>
+        </div>
+        <button class="primary-btn">View All</button>
+      </div>
+      <div class="order-grid">
+        <div class="book-card-mini">
+          <h3>Where the Crawdads Sing</h3>
+          <p>Delia Owens</p>
+          <span class="badge active">Trending</span>
+        </div>
+        <div class="book-card-mini">
+          <h3>The Silent Patient</h3>
+          <p>Alex Michaelides</p>
+          <span class="badge active">Recommended</span>
+        </div>
+        <div class="book-card-mini">
+          <h3>The Power of Habit</h3>
+          <p>Charles Duhigg</p>
+          <span class="badge warn">Popular</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="content-section clean-section" id="profile">
+      <div class="section-header-row">
+        <div>
+          <h2>Profile</h2>
+          <p>Manage your account settings and details.</p>
+        </div>
+      </div>
+      <div class="settings-layout">
+        <div class="settings-tabs">
+          <button class="tab-btn active" data-tab="account">Account</button>
+          <button class="tab-btn" data-tab="preferences">Preferences</button>
+          <button class="tab-btn" data-tab="privacy">Privacy</button>
+        </div>
+
+        <div class="settings-panels">
+          <div class="settings-panel active" id="account">
+            <form class="settings-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Full Name">
+                </div>
+                <div class="form-field">
+                  <label>Email</label>
+                  <input type="email" placeholder="Email Address">
+                </div>
+              </div>
+              <button class="primary-btn">Save Changes</button>
+            </form>
+          </div>
+
+          <div class="settings-panel" id="preferences">
+            <div class="settings-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Preferred Genres</label>
+                  <input type="text" placeholder="Preferred Genres">
+                </div>
+                <div class="form-field">
+                  <label>Reading Time</label>
+                  <input type="text" placeholder="Reading Time">
+                </div>
+              </div>
+              <button class="primary-btn">Update Preferences</button>
+            </div>
+          </div>
+
+          <div class="settings-panel" id="privacy">
+            <div class="settings-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Share Reading Activity</label>
+                  <div class="toggle">
+                    <input type="checkbox" id="shareActivity" checked>
+                    <label for="shareActivity"></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label>Email Promotions</label>
+                  <div class="toggle">
+                    <input type="checkbox" id="emailPromos">
+                    <label for="emailPromos"></label>
+                  </div>
+                </div>
+              </div>
+              <button class="primary-btn">Save Privacy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="content-section clean-section" id="support">
+      <div class="section-header-row">
+        <div>
+          <h2>Support</h2>
+          <p>Need help? Reach out to the IndieBooks team.</p>
+        </div>
+        <button class="primary-btn">Contact Support</button>
+      </div>
+      <div class="order-grid">
+        <div class="order-card clean-card">
+          <div>
+            <h3>Chat Support</h3>
+            <p>Typical response within 5 minutes.</p>
+          </div>
+          <span class="badge active">Online</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Email Support</h3>
+            <p>Average response within 24 hours.</p>
+          </div>
+          <span class="badge warn">Queue</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Community Forum</h3>
+            <p>Ask the community for recommendations.</p>
+          </div>
+          <span class="badge active">Open</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+<script>
+const shell = document.querySelector('.admin-shell');
+const themeToggle = document.getElementById('themeToggleUser');
+const rtlToggle = document.getElementById('rtlToggle');
+const tabButtons = document.querySelectorAll('.tab-btn');
+
+document.addEventListener('click', (event) => {
+  if (shell.classList.contains('sidebar-open') && !event.target.closest('.admin-sidebar')) {
+    shell.classList.remove('sidebar-open');
+  }
+});
+
+const sectionIds = ['overview','orders','wishlist','goals','recommendations','profile','support'];
+const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+const menuLinks = Array.from(document.querySelectorAll('.admin-menu .menu-item'));
+
+const activateLink = (id) => {
+  menuLinks.forEach((link) => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+  });
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      activateLink(entry.target.id);
+    }
+  });
+}, { rootMargin: '-45% 0px -50% 0px', threshold: 0.1 });
+
+sections.forEach((section) => observer.observe(section));
+
+document.querySelectorAll('.admin-menu a').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const targetId = link.getAttribute('href');
+    if (targetId && targetId.startsWith('#')) {
+      event.preventDefault();
+      const section = document.querySelector(targetId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    if (shell.classList.contains('sidebar-open')) {
+      shell.classList.remove('sidebar-open');
+    }
+  });
+});
+
+// Login link uses normal navigation
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    tabButtons.forEach((b) => b.classList.remove('active'));
+    document.querySelectorAll('.settings-panel').forEach((panel) => panel.classList.remove('active'));
+    btn.classList.add('active');
+    const target = document.getElementById(btn.dataset.tab);
+    if (target) target.classList.add('active');
+  });
+});
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('admin-dark');
+    document.body.classList.toggle('admin-light');
+    const icon = themeToggle.querySelector('i');
+    icon.classList.toggle('fa-moon');
+    icon.classList.toggle('fa-sun');
+  });
+}
+
+if (rtlToggle) {
+  rtlToggle.addEventListener('click', () => {
+    document.body.classList.toggle('rtl-active');
+  });
+}
+</script>
+
+</body>
+</html>

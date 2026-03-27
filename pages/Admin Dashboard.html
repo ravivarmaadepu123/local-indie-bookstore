@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard - Indie Bookstore</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body class="admin-body admin-light admin-dashboard-page">
+
+<div class="admin-shell admin-clean admin-dashboard-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar clean-sidebar admin-dashboard-sidebar" id="adminSidebar">
+
+    <div class="admin-brand clean-brand">
+      <div class="brand-mark clean-mark">
+        <i class="fa-solid fa-book"></i>
+      </div>
+      <div class="brand-text">
+        <h3>IndieBooks</h3>
+        <span>Admin Panel</span>
+      </div>
+    </div>
+
+    <div class="sidebar-search clean-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search menu">
+    </div>
+
+    <nav class="admin-menu clean-menu">
+      <a class="menu-item active" href="#overview">
+        <span class="menu-icon"><i class="fa-solid fa-chart-pie"></i></span>
+        <span class="menu-label">Dashboard</span>
+      </a>
+
+      <a class="menu-item" href="#users">
+        <span class="menu-icon"><i class="fa-solid fa-users"></i></span>
+        <span class="menu-label">Users</span>
+      </a>
+
+      <a class="menu-item" href="#products">
+        <span class="menu-icon"><i class="fa-solid fa-box"></i></span>
+        <span class="menu-label">Products</span>
+      </a>
+
+      <a class="menu-item" href="#analytics">
+        <span class="menu-icon"><i class="fa-solid fa-chart-line"></i></span>
+        <span class="menu-label">Analytics</span>
+      </a>
+
+      <a class="menu-item" href="#settings">
+        <span class="menu-icon"><i class="fa-solid fa-gear"></i></span>
+        <span class="menu-label">Settings</span>
+      </a>
+
+      <div class="menu-divider">Account</div>
+
+      <a class="menu-item logout" href="#logout">
+        <span class="menu-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+        <span class="menu-label">Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="admin-main clean-main">
+
+    <!-- NAVBAR -->
+    <header class="admin-navbar clean-navbar">
+      <div class="navbar-left">
+        <div class="brand-inline admin-brand-left">
+          <i class="fa-solid fa-book"></i>
+          <span>IndieBooks</span>
+        </div>
+      </div>
+
+      <div class="navbar-actions">
+        <button class="ghost-btn" id="rtlToggle" aria-label="Toggle RTL">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
+        <button class="ghost-btn" id="themeToggleAdmin" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a class="primary-btn btn-logout" href="login.html" aria-label="Login">Login</a>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="overview-section" id="overview">
+      <div class="overview-header">
+        <h1>Admin Overview</h1>
+      </div>
+
+      <div class="kpi-grid clean-kpi">
+        <div class="kpi-card clean-card green">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+          <div>
+            <span>Total Revenue</span>
+            <h2>$45,231</h2>
+            <p class="kpi-note up">+12% vs last month</p>
+          </div>
+        </div>
+
+        <div class="kpi-card clean-card blue">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-users"></i></div>
+          <div>
+            <span>Active Users</span>
+            <h2>1,204</h2>
+            <p class="kpi-note up">+5% vs last month</p>
+          </div>
+        </div>
+
+        <div class="kpi-card clean-card orange">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <span>Pending Orders</span>
+            <h2>23</h2>
+            <p class="kpi-note warn">Requires attention</p>
+          </div>
+        </div>
+
+        <div class="kpi-card clean-card purple">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-box"></i></div>
+          <div>
+            <span>Total Products</span>
+            <h2>450</h2>
+            <p class="kpi-note up">12 new this week</p>
+          </div>
+        </div>
+
+        <div class="kpi-card clean-card teal">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div>
+            <span>New Orders Today</span>
+            <h2>38</h2>
+            <p class="kpi-note up">$4,580 in sales</p>
+          </div>
+        </div>
+
+        <div class="kpi-card clean-card pink">
+          <div class="kpi-icon clean-icon"><i class="fa-solid fa-percent"></i></div>
+          <div>
+            <span>Conversion Rate</span>
+            <h2>3.2%</h2>
+            <p class="kpi-note up">+0.4% this week</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USERS -->
+    <section class="content-section clean-section" id="users">
+      <div class="section-header-row">
+        <div>
+          <h2>Users</h2>
+          <p>Recent activity from indie bookstore customers.</p>
+        </div>
+        <button class="primary-btn">View All</button>
+      </div>
+      <div class="clean-table">
+        <div class="table-row header">
+          <span>User</span>
+          <span>Email</span>
+          <span>Role</span>
+          <span>Status</span>
+        </div>
+        <div class="table-row">
+          <span>Emma Parker</span>
+          <span>emma@indiebooks.com</span>
+          <span>Admin</span>
+          <span class="badge active">Active</span>
+        </div>
+        <div class="table-row">
+          <span>Noah James</span>
+          <span>noah@indiebooks.com</span>
+          <span>Staff</span>
+          <span class="badge active">Active</span>
+        </div>
+        <div class="table-row">
+          <span>Sophia Lee</span>
+          <span>sophia@indiebooks.com</span>
+          <span>Support</span>
+          <span class="badge inactive">Inactive</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="content-section clean-section" id="products">
+      <div class="section-header-row">
+        <div>
+          <h2>Products</h2>
+          <p>Top performing books and inventory updates.</p>
+        </div>
+        <button class="primary-btn">Manage Catalog</button>
+      </div>
+      <div class="order-grid">
+        <div class="order-card clean-card">
+          <div>
+            <h3>The Midnight Library</h3>
+            <p>Inventory: 42 - Revenue: $8.2k</p>
+          </div>
+          <span class="badge active">In Stock</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Atomic Habits</h3>
+            <p>Inventory: 28 - Revenue: $6.5k</p>
+          </div>
+          <span class="badge active">In Stock</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Start With Why</h3>
+            <p>Inventory: 9 - Revenue: $4.9k</p>
+          </div>
+          <span class="badge warn">Low Stock</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANALYTICS -->
+    <section class="content-section clean-section" id="analytics">
+      <div class="section-header-row">
+        <div>
+          <h2>Analytics</h2>
+          <p>Monthly sales and traffic snapshot.</p>
+        </div>
+        <button class="primary-btn">Download</button>
+      </div>
+      <div class="analytics-grid clean-analytics">
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Revenue Over Time</h3>
+            <span class="chart-tag">+$18.4k</span>
+          </div>
+          <svg viewBox="0 0 520 220" class="chart-line">
+            <defs>
+              <linearGradient id="lineGlowClean" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#22c55e" stop-opacity="0.9"></stop>
+                <stop offset="100%" stop-color="#16a34a" stop-opacity="0.9"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M10 170 L80 130 L140 140 L210 90 L280 105 L350 60 L420 80 L510 30" fill="none" stroke="url(#lineGlowClean)" stroke-width="4" stroke-linecap="round" />
+            <path d="M10 170 L80 130 L140 140 L210 90 L280 105 L350 60 L420 80 L510 30 L510 210 L10 210 Z" fill="rgba(34,197,94,0.12)"></path>
+          </svg>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Monthly Sales</h3>
+            <span class="chart-tag">+22%</span>
+          </div>
+          <div class="bar-chart">
+            <div class="bar" style="--bar-height:60%"><span>Jan</span></div>
+            <div class="bar" style="--bar-height:75%"><span>Feb</span></div>
+            <div class="bar" style="--bar-height:50%"><span>Mar</span></div>
+            <div class="bar" style="--bar-height:80%"><span>Apr</span></div>
+            <div class="bar" style="--bar-height:95%"><span>May</span></div>
+            <div class="bar" style="--bar-height:70%"><span>Jun</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="content-section clean-section" id="settings">
+      <div class="section-header-row">
+        <div>
+          <h2>Settings</h2>
+          <p>Update profile, store preferences, and notifications.</p>
+        </div>
+      </div>
+      <div class="settings-layout">
+        <div class="settings-tabs">
+          <button class="tab-btn active" data-tab="profile">Profile</button>
+          <button class="tab-btn" data-tab="security">Security</button>
+          <button class="tab-btn" data-tab="notifications">Notifications</button>
+        </div>
+
+        <div class="settings-panels">
+          <div class="settings-panel active" id="profile">
+            <form class="settings-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Store Name</label>
+                  <input type="text" value="Indie Books">
+                </div>
+                <div class="form-field">
+                  <label>Manager</label>
+                  <input type="text" value="Emma Parker">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Contact Email</label>
+                  <input type="email" value="hello@indiebooks.com">
+                </div>
+                <div class="form-field">
+                  <label>Phone</label>
+                  <input type="tel" value="+1 555 132 4455">
+                </div>
+              </div>
+              <button class="primary-btn">Save Changes</button>
+            </form>
+          </div>
+
+          <div class="settings-panel" id="security">
+            <form class="settings-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Current Password</label>
+                  <input type="password" value="">
+                </div>
+                <div class="form-field">
+                  <label>New Password</label>
+                  <input type="password" value="">
+                </div>
+              </div>
+              <button class="primary-btn">Update Password</button>
+            </form>
+          </div>
+
+          <div class="settings-panel" id="notifications">
+            <div class="settings-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Email Alerts</label>
+                  <div class="toggle">
+                    <input type="checkbox" id="emailNotify" checked>
+                    <label for="emailNotify"></label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label>Weekly Summary</label>
+                  <div class="toggle">
+                    <input type="checkbox" id="weeklySummary" checked>
+                    <label for="weeklySummary"></label>
+                  </div>
+                </div>
+              </div>
+              <button class="primary-btn">Save Preferences</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+<script>
+const shell = document.querySelector('.admin-shell');
+const navToggle = document.getElementById('navToggle');
+const themeToggle = document.getElementById('themeToggleAdmin');
+const rtlToggle = document.getElementById('rtlToggle');
+const tabButtons = document.querySelectorAll('.tab-btn');
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    shell.classList.toggle('sidebar-open');
+  });
+}
+
+document.addEventListener('click', (event) => {
+  if (shell.classList.contains('sidebar-open') && !event.target.closest('.admin-sidebar') && !event.target.closest('#navToggle')) {
+    shell.classList.remove('sidebar-open');
+  }
+});
+
+const sectionIds = ['overview','users','products','analytics','settings'];
+const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+const menuLinks = Array.from(document.querySelectorAll('.admin-menu .menu-item'));
+
+const activateLink = (id) => {
+  menuLinks.forEach((link) => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+  });
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      activateLink(entry.target.id);
+    }
+  });
+}, { rootMargin: '-45% 0px -50% 0px', threshold: 0.1 });
+
+sections.forEach((section) => observer.observe(section));
+
+document.querySelectorAll('.admin-menu a').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const targetId = link.getAttribute('href');
+    if (targetId && targetId.startsWith('#')) {
+      event.preventDefault();
+      const section = document.querySelector(targetId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    if (shell.classList.contains('sidebar-open')) {
+      shell.classList.remove('sidebar-open');
+    }
+  });
+});
+
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    tabButtons.forEach((b) => b.classList.remove('active'));
+    document.querySelectorAll('.settings-panel').forEach((panel) => panel.classList.remove('active'));
+    btn.classList.add('active');
+    const target = document.getElementById(btn.dataset.tab);
+    if (target) target.classList.add('active');
+  });
+});
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('admin-dark');
+    document.body.classList.toggle('admin-light');
+    const icon = themeToggle.querySelector('i');
+    icon.classList.toggle('fa-moon');
+    icon.classList.toggle('fa-sun');
+  });
+}
+
+if (rtlToggle) {
+  rtlToggle.addEventListener('click', () => {
+    document.body.classList.toggle('rtl-active');
+  });
+}
+</script>
+
+</body>
+</html>
