@@ -2,6 +2,11 @@ html[dir="rtl"] body{
 direction:rtl;
 }
 
+[dir="rtl"] .rtl-flip{
+transform:scaleX(-1);
+display:inline-block;
+}
+
 /* html[dir="rtl"] .nav-wrapper{
 flex-direction:row-reverse;
 }

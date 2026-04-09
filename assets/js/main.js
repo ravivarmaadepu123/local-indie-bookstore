@@ -1,42 +1,43 @@
 
 /* DARK MODE */
 
-const themeBtn=document.getElementById("themeToggle");
-const icon=themeBtn.querySelector("i");
+const themeButtons = document.querySelectorAll("#themeToggle, #themeToggleMobile");
 
-themeBtn.addEventListener("click",()=>{
+const setThemeIcons = () => {
+  const isDark = document.body.classList.contains("dark-mode");
+  themeButtons.forEach((btn) => {
+    const icon = btn.querySelector("i");
+    if(!icon) return;
+    icon.classList.toggle("fa-moon", isDark);
+    icon.classList.toggle("fa-sun", !isDark);
+  });
+};
 
-document.body.classList.toggle("dark-mode");
-
-if(document.body.classList.contains("dark-mode")){
-
-icon.classList.replace("fa-sun","fa-moon");
-localStorage.setItem("theme","dark");
-
-}else{
-
-icon.classList.replace("fa-moon","fa-sun");
-localStorage.setItem("theme","light");
-
-}
-
+themeButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode")){
+      localStorage.setItem("theme","dark");
+    }else{
+      localStorage.setItem("theme","light");
+    }
+    setThemeIcons();
+  });
 });
 
 /* LOAD SAVED THEME */
 
 if(localStorage.getItem("theme")==="dark"){
-
-document.body.classList.add("dark-mode");
-icon.classList.replace("fa-sun","fa-moon");
-
+  document.body.classList.add("dark-mode");
 }
+setThemeIcons();
 
 
 /* RTL TOGGLE */
 
-const rtlBtn=document.getElementById("rtlToggle");
+const rtlButtons = document.querySelectorAll("#rtlToggle, #rtlToggleMobile");
 
-rtlBtn.addEventListener("click",()=>{
+rtlButtons.forEach((btn) => btn.addEventListener("click",()=>{
 
 const html=document.documentElement;
 
@@ -45,19 +46,51 @@ html.setAttribute(
 html.getAttribute("dir")==="ltr"?"rtl":"ltr"
 );
 
-});
+}));
 
 
 /* MOBILE MENU */
 
 const hamburger=document.querySelector(".hamburger");
 const nav=document.querySelector(".nav-menu");
+const hamburgerIcon = hamburger ? hamburger.querySelector("i") : null;
 
-hamburger.addEventListener("click",()=>{
+if(hamburger && nav){
+  const updateHamburger = () => {
+    const isOpen = nav.classList.contains("active");
+    if(hamburgerIcon){
+      hamburgerIcon.classList.toggle("fa-bars", !isOpen);
+      hamburgerIcon.classList.toggle("fa-xmark", isOpen);
+    }
+  };
+  updateHamburger();
+  hamburger.addEventListener("click",()=>{
+    nav.classList.toggle("active");
+    updateHamburger();
+  });
+}
 
-nav.classList.toggle("active");
+/* ACTIVE NAV LINK */
 
-});
+const navLinks = document.querySelectorAll(".nav-menu a");
+if(navLinks.length){
+  const currentFile = window.location.pathname.split("/").pop() || "index.html";
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if(!href || href === "#") return;
+    if(href === currentFile){
+      link.classList.add("active");
+    }
+  });
+
+  if(currentFile === "index.html" || currentFile === "Home page 2.html"){
+    const homeTrigger = document.querySelector(".nav-menu > ul > li.dropdown > a");
+    if(homeTrigger){
+      homeTrigger.classList.add("active");
+    }
+  }
+}
 /* BOOK FILTER */
 
 const filterBtns = document.querySelectorAll(".filter-btn");

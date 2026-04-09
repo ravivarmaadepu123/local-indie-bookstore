@@ -18,6 +18,7 @@
 <!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="12" fill="%23f2e9d8"/%3E%3Cpath d="M16 14h18c6 0 10 4 10 10v28c0 2-2 4-4 4H22c-3 0-6 2-6 4V14z" fill="%23925a2c"/%3E%3Cpath d="M16 14h18c6 0 10 4 10 10v28c0 2-2 4-4 4H22c-3 0-6 2-6 4" fill="none" stroke="%23fff" stroke-width="2"/%3E%3C/svg%3E">
 </head>
 
 <body class="admin-body admin-light admin-dashboard-page">
@@ -26,16 +27,19 @@
 
   <!-- SIDEBAR -->
   <aside class="admin-sidebar clean-sidebar admin-dashboard-sidebar" id="adminSidebar">
+    <button class="ghost-btn sidebar-close" id="sidebarClose" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
 
-    <div class="admin-brand clean-brand">
+    <a class="admin-brand clean-brand" href="index.html" aria-label="Inksire Books home">
       <div class="brand-mark clean-mark">
         <i class="fa-solid fa-book"></i>
       </div>
       <div class="brand-text">
-        <h3>IndieBooks</h3>
+        <h3>Inksire Books</h3>
         <span>Admin Panel</span>
       </div>
-    </div>
+    </a>
 
     <div class="sidebar-search clean-search">
       <i class="fa-solid fa-magnifying-glass"></i>
@@ -70,8 +74,8 @@
 
       <div class="menu-divider">Account</div>
 
-      <a class="menu-item logout" href="#logout">
-        <span class="menu-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+        <a class="menu-item logout" href="#logout">
+        <span class="menu-icon"><i class="fa-solid fa-right-from-bracket rtl-flip"></i></span>
         <span class="menu-label">Logout</span>
       </a>
     </nav>
@@ -83,10 +87,10 @@
     <!-- NAVBAR -->
     <header class="admin-navbar clean-navbar">
       <div class="navbar-left">
-        <div class="brand-inline admin-brand-left">
+        <a class="brand-inline admin-brand-left" href="index.html" aria-label="Inksire Books home">
           <i class="fa-solid fa-book"></i>
-          <span>IndieBooks</span>
-        </div>
+          <span>Inksire Books</span>
+        </a>
       </div>
 
       <div class="navbar-actions">
@@ -96,14 +100,19 @@
         <button class="ghost-btn" id="themeToggleAdmin" aria-label="Toggle theme">
           <i class="fa-solid fa-moon"></i>
         </button>
-        <a class="primary-btn btn-logout" href="login.html" aria-label="Login">Login</a>
+        <a class="ghost-btn profile-btn" href="#settings" aria-label="Profile">
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <button class="ghost-btn nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </header>
 
     <!-- OVERVIEW -->
     <section class="overview-section" id="overview">
       <div class="overview-header">
-        <h1>Admin Overview</h1>
+        <h1>Dashboard</h1>
       </div>
 
       <div class="kpi-grid clean-kpi">
@@ -209,6 +218,14 @@
         </div>
         <button class="primary-btn">Manage Catalog</button>
       </div>
+
+      <div class="section-header-row">
+        <div>
+          <h3>Inventory Status</h3>
+          <p>Live stock levels for your best sellers.</p>
+        </div>
+        <button class="ghost-btn">View Inventory</button>
+      </div>
       <div class="order-grid">
         <div class="order-card clean-card">
           <div>
@@ -230,6 +247,68 @@
             <p>Inventory: 9 - Revenue: $4.9k</p>
           </div>
           <span class="badge warn">Low Stock</span>
+        </div>
+      </div>
+
+      <div class="section-header-row">
+        <div>
+          <h3>Category Performance</h3>
+          <p>Sales mix by genre this month.</p>
+        </div>
+        <button class="ghost-btn">View Reports</button>
+      </div>
+      <div class="order-grid">
+        <div class="order-card clean-card">
+          <div>
+            <h3>Fiction</h3>
+            <p>$18.4k revenue - 420 units</p>
+          </div>
+          <span class="badge active">Trending</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Self-Help</h3>
+            <p>$9.7k revenue - 210 units</p>
+          </div>
+          <span class="badge active">Steady</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Business</h3>
+            <p>$6.2k revenue - 140 units</p>
+          </div>
+          <span class="badge warn">Low Stock</span>
+        </div>
+      </div>
+
+      <div class="section-header-row">
+        <div>
+          <h3>Upcoming Launches</h3>
+          <p>New arrivals scheduled for this quarter.</p>
+        </div>
+        <button class="ghost-btn">Schedule</button>
+      </div>
+      <div class="order-grid">
+        <div class="order-card clean-card">
+          <div>
+            <h3>Sunlit Stories</h3>
+            <p>Launch: Apr 18 - 120 preorders</p>
+          </div>
+          <span class="badge active">Queued</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>City of Letters</h3>
+            <p>Launch: May 02 - 96 preorders</p>
+          </div>
+          <span class="badge active">Queued</span>
+        </div>
+        <div class="order-card clean-card">
+          <div>
+            <h3>Quiet Pages</h3>
+            <p>Launch: May 22 - 58 preorders</p>
+          </div>
+          <span class="badge warn">Needs Review</span>
         </div>
       </div>
     </section>
@@ -368,6 +447,7 @@
 <script>
 const shell = document.querySelector('.admin-shell');
 const navToggle = document.getElementById('navToggle');
+const sidebarClose = document.getElementById('sidebarClose');
 const themeToggle = document.getElementById('themeToggleAdmin');
 const rtlToggle = document.getElementById('rtlToggle');
 const tabButtons = document.querySelectorAll('.tab-btn');
@@ -375,12 +455,33 @@ const tabButtons = document.querySelectorAll('.tab-btn');
 if (navToggle) {
   navToggle.addEventListener('click', () => {
     shell.classList.toggle('sidebar-open');
+    const icon = navToggle.querySelector('i');
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    }
+  });
+}
+
+if (sidebarClose) {
+  sidebarClose.addEventListener('click', () => {
+    shell.classList.remove('sidebar-open');
+    const icon = navToggle ? navToggle.querySelector('i') : null;
+    if (icon) {
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    }
   });
 }
 
 document.addEventListener('click', (event) => {
   if (shell.classList.contains('sidebar-open') && !event.target.closest('.admin-sidebar') && !event.target.closest('#navToggle')) {
     shell.classList.remove('sidebar-open');
+    const icon = navToggle ? navToggle.querySelector('i') : null;
+    if (icon) {
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    }
   }
 });
 
@@ -388,30 +489,25 @@ const sectionIds = ['overview','users','products','analytics','settings'];
 const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
 const menuLinks = Array.from(document.querySelectorAll('.admin-menu .menu-item'));
 
-const activateLink = (id) => {
+const setActiveSection = (id) => {
+  sections.forEach((section) => {
+    section.classList.toggle('active-section', section.id === id);
+  });
   menuLinks.forEach((link) => {
     link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
   });
 };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      activateLink(entry.target.id);
-    }
-  });
-}, { rootMargin: '-45% 0px -50% 0px', threshold: 0.1 });
-
-sections.forEach((section) => observer.observe(section));
+setActiveSection('overview');
 
 document.querySelectorAll('.admin-menu a').forEach((link) => {
   link.addEventListener('click', (event) => {
     const targetId = link.getAttribute('href');
     if (targetId && targetId.startsWith('#')) {
       event.preventDefault();
-      const section = document.querySelector(targetId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const id = targetId.replace('#','');
+      if (sectionIds.includes(id)) {
+        setActiveSection(id);
       }
     }
     if (shell.classList.contains('sidebar-open')) {
@@ -450,3 +546,6 @@ if (rtlToggle) {
 
 </body>
 </html>
+
+
+
